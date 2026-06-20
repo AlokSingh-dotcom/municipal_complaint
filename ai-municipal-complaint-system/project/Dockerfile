@@ -15,6 +15,9 @@ COPY . .
 RUN useradd -m appuser
 USER appuser
 
+RUN mkdir -p /app/static/uploads && \
+    chown -R appuser:appuser /app
+
 EXPOSE 5000
 
 CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:app"]
