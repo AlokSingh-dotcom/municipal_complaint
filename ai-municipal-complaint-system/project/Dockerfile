@@ -13,10 +13,11 @@ RUN pip install --upgrade pip && \
 COPY . .
 
 RUN useradd -m appuser
-USER appuser
 
 RUN mkdir -p /app/static/uploads && \
     chown -R appuser:appuser /app
+
+USER appuser
 
 EXPOSE 5000
 
