@@ -245,7 +245,7 @@ def submit_complaint():
         try:
             sns.publish(
                 TopicArn=SNS_TOPIC_ARN,
-                Subject="Complaint Registered Successfully",
+                Subject="Complaint Registered was a success",
                 Message=f"""
 Complaint Registered Successfully
 
