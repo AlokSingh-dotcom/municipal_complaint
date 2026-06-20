@@ -259,7 +259,7 @@ Status: Pending
 """
             )
 
-            print("SNS notification sent successfully")
+            print("SNS notification was a success")
 
         except Exception as e:
             print("SNS Error:", e)
